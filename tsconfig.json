@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "types": ["@nuxt/types", "node"],
+    "baseUrl": ".",
+    "paths": {
+      "sections/*": ["./components/sections/*"],
+      "elements/*": ["./components/elements/*"],
+      "images/*": ["./assets/images/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
