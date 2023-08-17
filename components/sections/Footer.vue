@@ -1,0 +1,5 @@
+<template>
+  <footer>
+    <h1>Sou o footer!</h1>
+  </footer>
+</template>
