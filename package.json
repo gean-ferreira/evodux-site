@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "evodux-site",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -13,6 +13,8 @@
     "@nuxt/devtools": "latest",
     "@types/node": "^18.17.3",
     "nuxt": "^3.6.5",
-    "prettier": "^3.0.2"
+    "prettier": "^3.0.2",
+    "sass": "^1.65.1",
+    "sass-loader": "^12.6.0"
   }
 }
