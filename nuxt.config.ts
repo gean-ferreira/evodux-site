@@ -8,11 +8,12 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@import "scss/main.scss";',
+          additionalData: '@import "scss/base/variable.scss";',
         },
       },
     },
   },
+  css: ['scss/main.scss'],
   app: {
     head: {
       link: [
