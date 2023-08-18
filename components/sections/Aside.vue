@@ -24,7 +24,7 @@
   .aside {
     padding: 64px 0;
     text-align: center;
-
+    background-color: $grey-2;
     @media (min-width: map-get($breakpoints, lg)) {
       padding: 64px;
     }
@@ -41,7 +41,7 @@
     }
 
     &__position {
-      color: $primary;
+      color: $secondary;
     }
 
     &__img {

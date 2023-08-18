@@ -8,7 +8,7 @@ Desenvolvedor Front-End com mais de 2 anos de experiência, especializado em cri
 
 ## Seções
 
-- **Sobre (Home)**: Uma breve descrição sobre mim e minha trajetória.
+- **Sobre**: Uma breve descrição sobre mim e minha trajetória.
 - **Experiências**: Detalhes das minhas experiências profissionais.
 - **Projetos**: Uma divisão entre projetos pessoais e profissionais.
 - **Certificados**: Lista dos meus certificados e suas credenciais.
@@ -17,8 +17,9 @@ Desenvolvedor Front-End com mais de 2 anos de experiência, especializado em cri
 
 ## Cores do Projeto
 
-- Principal: **#d9dadb**
-- Secundária: **#383838**
+- Primária: **#383838**
+- Secundária: **#2c98f0**
+- Cinza (Light): **#d9dadb**
 
 ## Rodando o Projeto Localmente
 
