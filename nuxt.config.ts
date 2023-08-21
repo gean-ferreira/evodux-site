@@ -49,5 +49,6 @@ export default defineNuxtConfig({
     images: fileURLToPath(new URL('./assets/images', import.meta.url)),
     elements: fileURLToPath(new URL('./components/elements', import.meta.url)),
     sections: fileURLToPath(new URL('./components/sections', import.meta.url)),
+    stores: fileURLToPath(new URL('./stores', import.meta.url)),
   },
 })
