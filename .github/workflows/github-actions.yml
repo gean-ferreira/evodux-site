@@ -1,0 +1,90 @@
+name: Deploy to Locaweb
+
+on:
+  push:
+    branches:
+      - develop # branch de desenvolvimento
+      - release # branch de homologação
+      - master # branch de produção
+
+jobs:
+  deploy-dev:
+    if: github.ref == 'refs/heads/develop'
+    name: Deploy to Dev
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build and Generate Project
+        run: npm run generate
+
+      - name: FTP Deploy to Dev
+        uses: locaweb/ftp-deploy@1.0.0
+        with:
+          host: ${{ secrets.HOST }}
+          user: ${{ secrets.USER }}
+          password: ${{ secrets.PASS }}
+          localDir: '.output/public'
+          remoteDir: 'public_html/dev'
+
+  deploy-hml:
+    if: github.ref == 'refs/heads/release'
+    name: Deploy to HML
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build and Generate Project
+        run: npm run generate
+
+      - name: FTP Deploy to HML
+        uses: locaweb/ftp-deploy@1.0.0
+        with:
+          host: ${{ secrets.HOST }}
+          user: ${{ secrets.USER }}
+          password: ${{ secrets.PASS }}
+          localDir: '.output/public'
+          remoteDir: 'public_html/hml'
+
+  deploy-prod:
+    if: github.ref == 'refs/heads/master'
+    name: Deploy to Prod
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build and Generate Project
+        run: npm run generate
+
+      - name: FTP Deploy to Prod
+        uses: locaweb/ftp-deploy@1.0.0
+        with:
+          host: ${{ secrets.HOST }}
+          user: ${{ secrets.USER }}
+          password: ${{ secrets.PASS }}
+          localDir: '.output/public'
+          remoteDir: 'public_html/'
