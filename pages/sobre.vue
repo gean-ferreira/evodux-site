@@ -2,10 +2,12 @@
   <NuxtLayout :name="'content'">
     <template #meta>sobre mim</template>
     <template #title>quem sou eu?</template>
+    <AboutMe />
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
+  import AboutMe from 'sections/AboutMe'
   useHead({
     title: 'Sobre',
     meta: [
