@@ -19,6 +19,27 @@ export default defineNuxtConfig({
     head: {
       link: [
         {
+          rel: 'preload',
+          href: '/Quicksand-Regular.ttf',
+          as: 'font',
+          type: 'font/ttf',
+          crossorigin: '',
+        },
+        {
+          rel: 'preload',
+          href: '/Quicksand-Bold.ttf',
+          as: 'font',
+          type: 'font/ttf',
+          crossorigin: '',
+        },
+        {
+          rel: 'preload',
+          href: '/PlayfairDisplay-Bold.ttf',
+          as: 'font',
+          type: 'font/ttf',
+          crossorigin: '',
+        },
+        {
           rel: 'apple-touch-icon',
           sizes: '180x180',
           href: '/apple-touch-icon.png',
