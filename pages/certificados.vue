@@ -1,5 +1,8 @@
 <template>
-  <h1>pagina certificados</h1>
+  <NuxtLayout :name="'content'">
+    <template #meta>certificados</template>
+    <template #title>minhas qualificações</template>
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts">

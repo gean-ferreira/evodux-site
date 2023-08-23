@@ -1,5 +1,8 @@
 <template>
-  <h1>pagina experiencias</h1>
+  <NuxtLayout :name="'content'">
+    <template #meta>experiências</template>
+    <template #title>minha Trajetória Profissional</template>
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts">

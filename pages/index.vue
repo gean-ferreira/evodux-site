@@ -1,5 +1,8 @@
 <template>
-  <h1>pagina home</h1>
+  <NuxtLayout :name="'content'">
+    <template #meta>home</template>
+    <template #title>impulsionando soluções tecnológicas</template>
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts">

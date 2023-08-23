@@ -1,5 +1,8 @@
 <template>
-  <h1>pagina sobre</h1>
+  <NuxtLayout :name="'content'">
+    <template #meta>sobre mim</template>
+    <template #title>quem sou eu?</template>
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts">

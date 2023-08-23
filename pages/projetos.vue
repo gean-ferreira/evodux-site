@@ -1,5 +1,8 @@
 <template>
-  <h1>pagina projetos</h1>
+  <NuxtLayout :name="'content'">
+    <template #meta>projetos</template>
+    <template #title>realizações e inovações</template>
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts">

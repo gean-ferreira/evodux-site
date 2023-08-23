@@ -1,5 +1,8 @@
 <template>
-  <h1>pagina contatos</h1>
+  <NuxtLayout :name="'content'">
+    <template #meta>contato</template>
+    <template #title>vamos conversar?</template>
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts">
