@@ -21,14 +21,19 @@
 <style lang="scss" scoped>
   .app {
     height: 100vh;
-    display: flex;
-
+    position: fixed;
+    word-wrap: break-word;
+    overflow: auto;
+    
     @media (min-width: map-get($breakpoints, lg)) {
       display: flex;
+      position: static;
     }
+    
     &.app__aside--open {
       overflow: hidden;
     }
+
     &.app__aside--open .app__content {
       opacity: 0.3;
       transform: translateX(60%);
@@ -40,6 +45,7 @@
       }
     }
     &__content {
+      height: 100%;
       padding: 96px 24px 64px 24px;
       overflow: auto;
       transition: transform 0.3s ease;

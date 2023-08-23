@@ -25,16 +25,15 @@
     position: absolute;
     top: 0;
     left: -60%;
-    height: 100vh;
     width: 60%;
-    height: 100%;
+    height: 100vh;
     transition: left 0.3s;
     text-align: center;
     background-color: $grey-2;
-    padding: 64px 0;
-    overflow: auto;
+    padding-top: 32px;
 
     @media (min-width: map-get($breakpoints, lg)) {
+      padding-top: 64px;
       position: static;
       flex: 1;
       left: 0;
@@ -60,13 +59,13 @@
     }
 
     &__img {
-      max-width: 150px;
-      max-height: 150px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
 
       @media (min-width: map-get($breakpoints, xl)) {
-        max-width: 250px;
-        max-height: 250px;
+        width: 250px;
+        height: 250px;
       }
     }
   }
