@@ -2,7 +2,9 @@
   <aside class="aside" :class="{ 'aside--open': asideStore.isOpen }">
     <div class="aside__infos">
       <img class="aside__img" :src="MyPhoto" alt="Foto de perfil" />
-      <h1 @click="asideStore.close" class="aside__name"><NuxtLink to="/">Gean Ferreira</NuxtLink></h1>
+      <h1 @click="asideStore.close" class="aside__name">
+        <NuxtLink to="/">Gean Ferreira</NuxtLink>
+      </h1>
       <span class="aside__position" @click="asideStore.close"
         ><NuxtLink to="/">DEV FRONT-END</NuxtLink></span
       >
@@ -30,6 +32,7 @@
     text-align: center;
     background-color: $grey-2;
     padding: 64px 0;
+    overflow: auto;
 
     @media (min-width: map-get($breakpoints, lg)) {
       position: static;

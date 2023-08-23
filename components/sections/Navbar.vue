@@ -42,7 +42,7 @@
 
     &__link {
       position: relative;
-      color: inherit; // Herda a cor padrão do texto
+      letter-spacing: 1px;
 
       &::after {
         content: '';

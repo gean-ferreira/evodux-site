@@ -1,19 +1,18 @@
 <template>
   <section
     class="app container"
-    :class="{ 'app--aside-open': asideStore.isOpen }"
+    :class="{ 'app__aside--open': asideStore.isOpen }"
   >
     <Aside />
     <Hamburger />
-    <section @click="asideStore.close" class="content">
+    <section @click="asideStore.close" class="app__content">
       <slot />
     </section>
   </section>
-  <Footer />
 </template>
 
 <script setup lang="ts">
-  import { Aside, Footer } from 'sections'
+  import { Aside } from 'sections'
   import Hamburger from 'elements/Hamburger'
   import { useAsideStore } from 'stores/aside'
   const asideStore = useAsideStore()
@@ -27,12 +26,10 @@
     @media (min-width: map-get($breakpoints, lg)) {
       display: flex;
     }
-    &.app--aside-open {
+    &.app__aside--open {
       overflow: hidden;
-      @media (min-width: map-get($breakpoints, lg)) {
-      }
     }
-    &.app--aside-open .content {
+    &.app__aside--open .app__content {
       opacity: 0.3;
       transform: translateX(60%);
       overflow: hidden;
@@ -42,7 +39,7 @@
         opacity: 1;
       }
     }
-    .content {
+    &__content {
       padding: 96px 24px 64px 24px;
       overflow: auto;
       transition: transform 0.3s ease;
