@@ -1,17 +1,18 @@
 @font-face {
   font-family: 'font-regular';
-  src: url('/Quicksand-Regular.ttf');
-  font-display: swap;
+  src: local("Quicksand Regular"), url("/fonts/Quicksand-Regular.woff2") format("woff2"), url("/fonts/Quicksand-Regular.woff") format("woff");
+  font-display: block;
+  
 }
 
 @font-face {
   font-family: 'font-bold';
-  src: url('/Quicksand-Bold.ttf');
-  font-display: swap;
+  src: local("Quicksand Bold"), url("/fonts/Quicksand-Bold.woff2") format("woff2"), url("/fonts/Roboto/Quicksand-Bold.woff") format("woff");
+  font-display: block;
 }
 
 @font-face {
   font-family: 'title-bold';
-  src: url('/PlayfairDisplay-Bold.ttf');
-  font-display: swap;
+  src: local("PlayfairDisplay Bold"), url("/fonts/PlayfairDisplay-Bold.woff2") format("woff2"), url("/fonts/Roboto/PlayfairDisplay-Bold.woff") format("woff");
+  font-display: block;
 }
